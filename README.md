@@ -7,7 +7,7 @@
 <p align="center">A calm, native Mac app for Azure Service Bus.<br>Browse queues, topics and subscriptions, inspect messages safely, and fix dead letters without leaving your Mac.</p>
 
 <p align="center">
-  <a href="assets/service-bus-studio-tour.mp4"><img src="assets/tour.jpg" alt="Watch the 46-second tour of Service Bus Studio"></a>
+  <a href="https://sandyprc.github.io/sbs/"><img src="assets/tour.jpg" alt="Watch the 46-second tour of Service Bus Studio"></a>
 </p>
 
 ## What it does

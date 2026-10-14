@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service Bus Studio</title>
+<meta name="description" content="A calm, native Mac app for Azure Service Bus.">
+<meta property="og:title" content="Service Bus Studio">
+<meta property="og:description" content="A calm, native Mac app for Azure Service Bus.">
+<meta property="og:image" content="https://sandyprc.github.io/sbs/assets/tour.jpg">
+<link rel="icon" href="assets/icon.png">
+<style>
+/* The app's own dark palette: warm graphite, ivory text, teal accent, the icon's copper. */
+:root {
+  --stage: #1e2020; --panel: #2b2d2d; --line: #3c3e3e; --ink: #eceae5; --muted: #a3a29c; --accent: #93b7af; --copper: #d6a58b;
+  --sans: -apple-system, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--stage); color: var(--ink); font: 16px/1.5 var(--sans); -webkit-font-smoothing: antialiased; }
+main { max-width: 1040px; margin: 0 auto; padding-inline: 20px; padding-block: 56px 40px; display: grid; gap: 28px; justify-items: center; text-align: center; }
+header { display: grid; gap: 10px; justify-items: center; }
+header img { width: 96px; height: 96px; }
+h1 { margin: 6px 0 0; font-size: clamp(34px, 6vw, 56px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.05; }
+.tagline { margin: 0; font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); }
+.tagline span { color: var(--accent); }
+.rule { width: 72px; height: 2px; background: var(--copper); border: 0; margin: 4px 0 0; }
+.film { width: 100%; border-radius: 14px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; box-shadow: 0 30px 80px rgb(0 0 0 / 0.5), 0 0 0 1px var(--line); }
+video { width: 100%; height: 100%; display: block; }
+.install { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 12px; }
+code { min-width: 0; overflow-wrap: anywhere; font: 15px/1.4 var(--mono); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; }
+button, .button { font: 600 15px/1 var(--sans); border-radius: 999px; padding: 12px 20px; cursor: pointer; text-decoration: none; }
+button { color: var(--stage); background: var(--accent); border: 0; }
+.button { color: var(--ink); border: 1px solid var(--line); }
+button:focus-visible, .button:focus-visible, a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.button:hover { border-color: var(--accent); }
+.meta { margin: 0; color: var(--muted); font-size: 14px; max-width: 60ch; }
+.meta a { color: var(--accent); }
+footer { color: #6e706d; font-size: 13px; padding-block: 8px 32px; text-align: center; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="assets/icon.png" alt="">
+    <h1>Service Bus Studio</h1>
+    <p class="tagline">Your messages. <span>In focus.</span></p>
+    <hr class="rule">
+  </header>
+
+  <div class="film">
+    <video controls playsinline preload="metadata" poster="assets/poster.jpg" src="assets/service-bus-studio-tour.mp4"></video>
+  </div>
+
+  <div class="install">
+    <code id="command">brew install --cask sandyprc/tap/service-bus-studio</code>
+    <button type="button" id="copy">Copy</button>
+    <a class="button" href="https://github.com/Sandyprc/sbs/releases/latest">Download DMG</a>
+  </div>
+
+  <p class="meta">A native Mac app for Azure Service Bus. Requires macOS 15 or later on Apple silicon.
+    Updates install from inside the app. <a href="https://github.com/Sandyprc/sbs#readme">Install help and details</a></p>
+</main>
+<footer>© 2026 Sandeep RC. All rights reserved.</footer>
+<script>
+document.getElementById('copy').addEventListener('click', async (event) => {
+  const button = event.currentTarget;
+  try {
+    await navigator.clipboard.writeText(document.getElementById('command').textContent);
+    button.textContent = 'Copied';
+  } catch {
+    getSelection().selectAllChildren(document.getElementById('command'));
+    button.textContent = 'Press ⌘C';
+  }
+  setTimeout(() => { button.textContent = 'Copy'; }, 1800);
+});
+</script>
+</body>
+</html>
