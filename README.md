@@ -55,6 +55,10 @@ xattr -dr com.apple.quarantine "/Applications/Service Bus Studio.app"
 
 ## Update
 
+From version 0.1.1 the app updates itself. It checks once a day and asks before installing; you can also choose **Service Bus Studio › Check for Updates…** at any time, or turn automatic checks off in Settings.
+
+On 0.1.0, update once by hand:
+
 ```sh
 brew upgrade --cask service-bus-studio
 ```
