@@ -41,13 +41,18 @@ This adds the tap and installs **Service Bus Studio** into your Applications fol
 
 ### First launch
 
-Service Bus Studio is not notarized by Apple yet, so macOS asks you to confirm the first time you open it:
+Installed with Homebrew? It opens straight away.
 
-1. Open **Service Bus Studio** from Applications. macOS says it cannot verify the app. Click **Done**.
-2. Open **System Settings › Privacy & Security**, scroll to **Security**, and click **Open Anyway** next to Service Bus Studio.
-3. Confirm with Touch ID or your password. From now on the app opens normally.
+Downloaded the DMG? Service Bus Studio is not notarized by Apple yet, so macOS blocks the first launch:
 
-Prefer the terminal? This removes the download flag so the app opens straight away:
+1. Open **Service Bus Studio** from Applications. When macOS says it cannot verify the app, click **Done**.
+2. Run this to jump straight to the right settings page, then click **Open Anyway** and confirm:
+
+   ```sh
+   open "x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension"
+   ```
+
+Or skip both steps by clearing the download flag:
 
 ```sh
 xattr -dr com.apple.quarantine "/Applications/Service Bus Studio.app"
