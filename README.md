@@ -105,3 +105,5 @@ This repository hosts the downloads. The Homebrew cask lives in [Sandyprc/homebr
 <p align="center">
   <img src="assets/dark.png" alt="Service Bus Studio in the dark theme">
 </p>
+
+<sub>© 2026 Sandeep RC. All rights reserved.</sub>
