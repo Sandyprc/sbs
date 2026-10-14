@@ -76,7 +76,6 @@ To also remove its settings and saved connection list: `brew uninstall --zap --c
 
 ## Getting started
 
-- **Try it offline:** choose **Explore sample namespace** on the welcome screen. Everything works on demo data and nothing is sent anywhere.
 - **Connect with a connection string:** choose **Add a connection**, pick **SAS connection string** and paste it. It is stored only in your Keychain.
 - **Local emulator:** the [Azure Service Bus emulator](https://learn.microsoft.com/azure/service-bus-messaging/overview-emulator) works too; add its connection string (with `UseDevelopmentEmulator=true`) as a connection.
 - **Microsoft Entra ID:** sign-in uses your own app registration (a public client with redirect URI `servicebusstudio://auth`). Entra ID is also what unlocks Azure Monitor metrics history. This option is new and still being verified.
