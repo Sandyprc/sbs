@@ -7,7 +7,7 @@
 <p align="center">A calm, native Mac app for Azure Service Bus.<br>Browse queues, topics and subscriptions, inspect messages safely, and fix dead letters without leaving your Mac.</p>
 
 <p align="center">
-  <img src="assets/overview.png" alt="Service Bus Studio showing a namespace overview on a MacBook">
+  <a href="assets/service-bus-studio-tour.mp4"><img src="assets/tour.jpg" alt="Watch the 46-second tour of Service Bus Studio"></a>
 </p>
 
 ## What it does
@@ -18,10 +18,6 @@
 - **Repair dead letters:** see why a message failed, edit it and resend it as a new message.
 - **Manage entities:** create, edit and delete queues, topics and subscriptions. Deleting asks you to type the exact name.
 - **Sessions, scheduled and deferred messages**, a command palette (⌘K), and warm light and dark themes.
-
-<p align="center">
-  <img src="assets/inspector.png" alt="The message inspector showing a message body">
-</p>
 
 ## Install
 
@@ -101,9 +97,5 @@ To also remove its settings and saved connection list: `brew uninstall --zap --c
 Found a bug or want a feature? [Open an issue](https://github.com/Sandyprc/sbs/issues).
 
 This repository hosts the downloads. The Homebrew cask lives in [Sandyprc/homebrew-tap](https://github.com/Sandyprc/homebrew-tap). The app's source code is not public.
-
-<p align="center">
-  <img src="assets/dark.png" alt="Service Bus Studio in the dark theme">
-</p>
 
 <sub>© 2026 Sandeep RC. All rights reserved.</sub>
